@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="library.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&family=Roboto:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>SIMPLE LIBRARY</h1>
+      <button id="new-book">ADD BOOK</button>
+    </header>
+    <div class="form-pop" id="popUpForm">
+      <form id="form" action="" method="get">
+        <div class="input">
+          <label for="author"> AUTHOR:</label>
+          <input
+            type="text"
+            name="author"
+            id="author"
+            minlength="1"
+            maxlength="25"
+            required
+          />
+        </div>
+        <div class="input">
+          <label for="title"> TITLE:</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            minlength="1"
+            maxlength="25"
+            required
+          />
+        </div>
+        <div class="input">
+          <label for="pages"> PAGES:</label>
+          <input
+            type="number"
+            name="pages"
+            id="pages"
+            min="0"
+            oninput="validity.valid||(value='');"
+            required
+          />
+        </div>
+        <div class="input">
+          <label for="read"> READ STATUS:</label>
+          <input type="checkbox" name="read" id="read" />
+        </div>
+        <div class="submit-btn">
+          <button type="submit">ADD</button>
+        </div>
+        <div class="close-form">
+          <button type="button" id="cancel">X</button>
+        </div>
+      </form>
+    </div>
+    <div class="library" id="library"></div>
+    <script src="library.js"></script>
+  </body>
+</html>
